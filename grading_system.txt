@@ -8,7 +8,7 @@ Library     Selenium2Library
 Grade A
     Go to grading system page
     Fill in score       80
-    User should see     A
+    User should see     Your grade is A
 
 *** Keywords ***
 Go to grading system page

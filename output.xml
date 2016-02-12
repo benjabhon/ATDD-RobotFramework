@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160212 13:43:04.701" generator="Robot 3.0 (Python 2.7.5 on darwin)">
+<suite source="/Users/benjabhon/git/ATDD-RobotFramework/grading_system.txt" id="s1" name="Grading System">
+<test id="s1-t1" name="Grade A">
+<kw name="Go to grading system page">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.clockupstudio.com/demo/gradejs/</arg>
+</arguments>
+<msg timestamp="20160212 13:43:04.880" level="INFO">Opening browser 'firefox' to base url 'http://www.clockupstudio.com/demo/gradejs/'</msg>
+<status status="PASS" endtime="20160212 13:43:11.218" starttime="20160212 13:43:04.879"></status>
+</kw>
+<status status="PASS" endtime="20160212 13:43:11.218" starttime="20160212 13:43:04.879"></status>
+</kw>
+<kw name="Fill in score">
+<arguments>
+<arg>80</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>score</arg>
+<arg>${score}</arg>
+</arguments>
+<msg timestamp="20160212 13:43:11.220" level="INFO">Typing text '80' into text field 'score'</msg>
+<status status="PASS" endtime="20160212 13:43:11.323" starttime="20160212 13:43:11.219"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>submit</arg>
+</arguments>
+<msg timestamp="20160212 13:43:11.323" level="INFO">Clicking button 'submit'.</msg>
+<status status="PASS" endtime="20160212 13:43:11.398" starttime="20160212 13:43:11.323"></status>
+</kw>
+<status status="PASS" endtime="20160212 13:43:11.398" starttime="20160212 13:43:11.219"></status>
+</kw>
+<kw name="User should see">
+<arguments>
+<arg>Your grade is A</arg>
+</arguments>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${grade result}</arg>
+</arguments>
+<msg timestamp="20160212 13:43:11.427" level="INFO">&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;head&gt;&lt;style type="text/css"&gt;@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}&lt;/style&gt;
+    &lt;title&gt;Grade.js ATDD demo&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body ng-controller="GradeController" ng-app="GradeJS"&gt;
+    &lt;h1&gt;
+        &lt;span&gt; Score: &lt;/span&gt;
+        &lt;input type="text" ng-bind="score" id="score" /&gt;
+        &lt;input type="submit" ng-click="executeGrade()" id="submit" /&gt;
+        &lt;br /&gt;
+        &lt;div ng-bind-template="Your grade is {{result}}" ng-show="result"&gt;&lt;/div&gt;
+    &lt;/h1&gt;
+
+    &lt;script src="js/angular.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;script src="js/grade.js" type="text/javascript"&gt;&lt;/script&gt;
+
+
+
+&lt;/body&gt;&lt;/html&gt;</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20160212 13:43:11.504" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20160212 13:43:11.504" starttime="20160212 13:43:11.428"></status>
+</kw>
+<msg timestamp="20160212 13:43:11.505" level="FAIL">Page should have contained text 'Your grade is A' but did not</msg>
+<status status="FAIL" endtime="20160212 13:43:11.505" starttime="20160212 13:43:11.399"></status>
+</kw>
+<status status="FAIL" endtime="20160212 13:43:11.505" starttime="20160212 13:43:11.399"></status>
+</kw>
+<status status="FAIL" endtime="20160212 13:43:11.505" critical="yes" starttime="20160212 13:43:04.878">Page should have contained text 'Your grade is A' but did not</status>
+</test>
+<status status="FAIL" endtime="20160212 13:43:11.506" starttime="20160212 13:43:04.703"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Grading System" pass="0">Grading System</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
