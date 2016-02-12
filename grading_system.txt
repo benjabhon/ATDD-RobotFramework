@@ -1,17 +1,32 @@
 *** Settings ***
 Library     Selenium2Library
-
-
+Suite Setup    Go to grading system
+Suite Teardown    Close Browser
 *** Variables ***
 
 *** Test Cases ***
 Grade A
-    Go to grading system page
     Fill in score       80
-    User should see     Your grade is A
+    User should see     A
+
+Grade B
+    Fill in score       75
+    User should see     B
+
+# Grade C
+#     Fill in score       65
+#     User should see     C
+
+# Grade D
+#     Fill in score       50
+#     User should see     D
+
+# Grade F
+#     Fill in score       30
+#     User should see     F
 
 *** Keywords ***
-Go to grading system page
+Go to grading system
     Open Browser    http://www.clockupstudio.com/demo/gradejs/
 
 Fill in score
@@ -21,4 +36,4 @@ Fill in score
 
 User should see
     [Arguments]     ${grade result}
-    Page Should Contain    ${grade result}
+    Page Should Contain    Your grade is ${grade result}
