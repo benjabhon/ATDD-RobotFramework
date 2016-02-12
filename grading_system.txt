@@ -21,9 +21,9 @@ Grade D
     Fill in score       50
     User should see     D
 
-# Grade F
-#     Fill in score       30
-#     User should see     F
+Grade F
+    Fill in score       30
+    User should see     F
 
 *** Keywords ***
 Go to grading system
