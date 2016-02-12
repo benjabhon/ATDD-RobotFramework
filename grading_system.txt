@@ -1,0 +1,24 @@
+*** Settings ***
+Library     Selenium2Library
+
+
+*** Variables ***
+
+*** Test Cases ***
+Grade A
+    Go to grading system page
+    Fill in score       80
+    User should see     A
+
+*** Keywords ***
+Go to grading system page
+    Open Browser    http://www.clockupstudio.com/demo/gradejs/
+
+Fill in score
+    [Arguments]     ${score}
+    Input Text    score    ${score}
+    Click Button    submit
+
+User should see
+    [Arguments]     ${grade result}
+    Page Should Contain    ${grade result}
