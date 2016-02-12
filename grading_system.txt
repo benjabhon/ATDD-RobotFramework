@@ -17,9 +17,9 @@ Grade C
     Fill in score       65
     User should see     C
 
-# Grade D
-#     Fill in score       50
-#     User should see     D
+Grade D
+    Fill in score       50
+    User should see     D
 
 # Grade F
 #     Fill in score       30
